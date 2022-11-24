@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container" style="background-color: white; padding: 50px; margin-top: 100px;">
+	<h1>FaceAccess: Website Blocker with Face Recognition</h1>
+	<hr>
+	<div class="container">
+		<a class="btn btn-primary"  href="{% url 'identify' %}" style="font-size: 20px; margin-bottom: 10px;">Identificar Usuario</a>
+		<a class="btn btn-primary"  href="{% url 'detected' %}" style="font-size: 20px; margin-bottom: 10px;">Usuarios detectados</a>
+		<a class="btn btn-primary" href="{% url 'add_user' %}" style="font-size: 20px; margin-bottom: 10px;">Agregar nuevo usuario</a>
+		<a class="btn btn-primary"  href="{% url 'add_photos' %}" style="font-size: 20px; margin-bottom: 10px;">Agregar foto</a>
+		<a class="btn btn-primary"  href="{% url 'train_model' %}" style="font-size: 20px; margin-bottom: 10px;">Entrenar Modelo</a>
+		<a class="btn btn-primary"  href="{% url 'add_website' %}" style="font-size: 20px; margin-bottom: 10px;">Bloquear Website</a>
+		<a class="btn btn-primary"  href="{% url 'admin_website' %}" style="font-size: 20px; margin-bottom: 10px;">Administrar Websites</a>
+	</div>
+</div>
+{% endblock %}
