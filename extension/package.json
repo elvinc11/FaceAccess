@@ -1,0 +1,23 @@
+{
+  "name": "face_rec_django",
+  "version": "1.0.0",
+  "description": "chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvinc11/FaceAccess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elvinc11/FaceAccess/issues"
+  },
+  "homepage": "https://github.com/elvinc11/FaceAccess#readme",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "typescript": "^4.9.3"
+  }
+}
