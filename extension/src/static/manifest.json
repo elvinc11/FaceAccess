@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "FaceAccess",
+    "description": "Website Blocker with Face Recognition",
+    "version": "1.0.0",
+    "icons":{
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "FaceAccess Extension",
+        "default_icon": "logo.png"
+    },
+    "options_page": "options.html"
+}
