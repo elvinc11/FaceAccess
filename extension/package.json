@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/elvinc11/FaceAccess#readme",
   "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
     "@types/chrome": "^0.0.203",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",

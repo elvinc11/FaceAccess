@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponseNotFound
+from django.http import HttpResponseRedirect, HttpResponseNotFound, JsonResponse
 from django.urls import reverse
 from django.utils import timezone
 from .facerec.faster_video_stream import stream
@@ -12,7 +12,8 @@ import pickle
 import face_recognition
 import datetime
 from cachetools import TTLCache
-
+from .serializers import WebsiteSerializer
+from rest_framework.decorators import api_view
 
 cache = TTLCache(maxsize=20, ttl=60)
 
@@ -284,3 +285,11 @@ def delete_website(request,website_id):
     website = get_object_or_404(website_id = website_id)
     website.delete()
     return HttpResponseRedirect(reverse('admin_website'))
+
+@api_view(['GET'])
+def getWebsites(request):
+
+    if request.method == 'GET':
+        websites = Website.objects.all()
+        serializer = WebsiteSerializer(websites, many=True)
+        return JsonResponse(serializer.data, safe=False)
