@@ -272,7 +272,7 @@ def add_website(request):
         form = WebsiteForm(request.POST)
         if form.is_valid():
             website = form.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('dashboard'))
     else:
         form = WebsiteForm()
     return render(request, 'app/add_website.html', {'form': form})
@@ -282,7 +282,7 @@ def admin_website(request):
     return render(request,'app/admin_website.html', {'website_list': website_list})
 
 def delete_website(request,website_id):
-    website = get_object_or_404(website_id = website_id)
+    website = get_object_or_404(Website ,website_id = website_id)
     website.delete()
     return HttpResponseRedirect(reverse('admin_website'))
 

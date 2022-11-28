@@ -21,8 +21,9 @@ export default function MenuCard() {
           <Websites/>        
       </CardContent>
       <CardActions>
-        <Button size="small">Ajustes</Button>
+        <Button href="http://127.0.0.1:8000/" target="_blank"size="small">Ajustes</Button>
       </CardActions>
     </Card>
   );
 }
+
