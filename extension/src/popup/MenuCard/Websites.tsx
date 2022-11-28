@@ -32,7 +32,7 @@ export default function Websites(){
                 {web.url}
               </div>
             )
-        } ) : <div>No hay sitios web bloqueados</div>}
+        } ) :<div>No hay sitios web bloqueados</div>}
         </Typography> 
     );
 }

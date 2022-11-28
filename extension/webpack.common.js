@@ -12,7 +12,6 @@ module.exports = {
         contentScript: path.resolve('src/contentScript/contentScript.ts')
     },
     module: {
-        devtool: 'source-map',
         rules: [
             {
                 use: 'ts-loader',
