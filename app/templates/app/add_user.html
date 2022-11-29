@@ -5,15 +5,15 @@
 
 {% block content %}
     <div class="container" style="background-color: white; padding: 50px;">
-    <h3>Ingresar Usuario</h3>
+    <h3 class="text-primary">Ingresar Usuario</h3>
 
     <form method="POST">{% csrf_token %}
         <div class="fieldWrapper">
-            <div class=""container" style="padding: 20px;">ID:  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ form.id }} </div>
-            <div class=""container" style="padding: 20px;">Nombre: {{ form.name }} </div>
+            <div class="container" style="padding: 20px;">ID:  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ form.id }} </div>
+            <div class="container" style="padding: 20px;">Nombre: {{ form.name }} </div>
 
         </div>
-        <button type="submit" class="save btn btn-info">Save</button>
+        <button type="submit" class="btn btn-outline-primary">Save</button>
     </form>
     </div>
 {% endblock %}
