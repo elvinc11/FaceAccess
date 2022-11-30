@@ -44,12 +44,12 @@
 <div class="container" style="background-color: white; padding: 50px;">
 
 <form type="get" action="." style="margin: 0">
-    Enter Date: <input id="search_submit" type="date" name="search_box">
-    <button id="search_submit" type="submit" >Submit</button>
+    Ingresar Fecha: <input id="search_submit" type="date" name="search_box">
+    <button id="search_submit" type="submit" >Buscar</button>
 </form>
 <br>
 
-<strong>Date: {{ date|date:"D, d M, Y" }}</strong>
+<strong>Fecha: {{ date|date:"D, d M, Y" }}</strong>
 
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for name.." style="float: right; padding: 10px;">
   <br>
@@ -57,7 +57,7 @@
   <table id="myTable">
     <tr class="header">
       	<th width="200">ID</th>
-      	<th width="300">timestamp</th>
+      	<th width="300">Fecha Ingreso</th>
         <th width="100">Image</th>
   	</tr>
   	{% for det in det_list %}
@@ -84,15 +84,12 @@
                   </div>
                 </div>
             </td>
-
-
-
-
-
-
         </tr>
-
+        
   	{% endfor %}
+    <tr>
+      <th width="200"><a href="{% url 'dashboard' %}">Regresar</a></th>
+  </tr>
   </table>
 </div>
 
