@@ -12,10 +12,10 @@ export default function MenuCard() {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 20, color: 'primary.main' }} color="text.secondary" gutterBottom>
           FaceAccess
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography sx={{ mb: 1.5, fontWeight: 'bold' }} color="text.secondary">
           Sitios web bloqueados
         </Typography>
           <Websites/>        
