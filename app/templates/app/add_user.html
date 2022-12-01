@@ -9,9 +9,7 @@
 
     <form method="POST">{% csrf_token %}
         <div class="fieldWrapper">
-            <div class="container" style="padding: 20px;">ID: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ form.id }} </div>
             <div class="container" style="padding: 20px;">Nombre: {{ form.name }} </div>
-
         </div>
         <button type="submit" class="btn btn-outline-primary">Agregar</button>
         <a style="margin-left: 10px" href="{% url 'dashboard' %}" class="btn btn-primary">Regresar</a>

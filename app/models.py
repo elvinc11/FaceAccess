@@ -5,7 +5,7 @@ import os
 # Create your models here.
 
 class User(models.Model):
-	id = models.CharField(primary_key=True, max_length=10)
+	id = models.AutoField(primary_key=True)
 	name = models.CharField(max_length=50)
 
 	def __str__(self):
@@ -30,7 +30,7 @@ class Detected(models.Model):
 		return f"{user.name} {self.time_stamp}"
 
 class Website(models.Model):
-	website_id = models.CharField(primary_key=True, max_length=10)
+	website_id = models.AutoField(primary_key=True)
 	url = models.CharField(max_length=500)
 	
 	def __str__(self):

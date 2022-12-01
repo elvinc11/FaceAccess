@@ -6,10 +6,10 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('id', 'name',)
+        fields = ('name',)
 
 class WebsiteForm(forms.ModelForm):
 
     class Meta:
         model = Website
-        fields = ('website_id', 'url')
+        fields = ('url',)

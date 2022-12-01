@@ -9,7 +9,6 @@
 
     <form method="POST">{% csrf_token %}
         <div class="fieldWrapper">
-            <div class="container" style="padding: 20px;">ID:  &nbsp; &nbsp;{{ form.website_id }} </div>
             <div class="container" style="padding: 20px;">URL: {{ form.url }} </div>
         </div>
         <button type="submit" class="btn btn-outline-primary">Guardar</button>
