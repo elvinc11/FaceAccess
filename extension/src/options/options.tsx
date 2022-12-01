@@ -4,7 +4,7 @@ import './options.css';
 
 function App() {
     return (
-        <p>fetch</p>
+        <p></p>
     );
   }
 

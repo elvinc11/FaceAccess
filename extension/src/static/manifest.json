@@ -14,7 +14,7 @@
         "default_icon": "logo.png"
     },
     "permissions": [
-        "storage"
+        "storage","tabs"
       ],
     "options_page": "options.html",
     "background": {

@@ -254,15 +254,18 @@ const generateHTML = (pageName) => {
    `;
 };
 
-getStoredUrls().then(data =>{
-  console.log(data);
-  data.forEach(url=>{
-    if(window.location.host == url){
-      document.head.innerHTML = generateSTYLES();
-      document.body.innerHTML = generateHTML(url);
-    }
-  })
-}).catch(err=>{
-  console.log(err);
+chrome.runtime.sendMessage('from content', response =>{
+  console.log(response);
 })
 
+chrome.runtime.onMessage.addListener((message,sender, sendReponse) =>{
+  if(Array.isArray(message)){
+    message.forEach(url => {
+      if(window.location.host == url){
+        document.head.innerHTML = generateSTYLES();
+        document.body.innerHTML = generateHTML(url);
+      }
+    })
+  }
+  
+})
