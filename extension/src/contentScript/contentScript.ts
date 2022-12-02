@@ -249,7 +249,6 @@ const generateHTML = (pageName) => {
       <div class='_404'>404</div>
       <hr>
       <div class='_1'>Sitio web bloquado por FaceAccess</div>
-      <div class='_2'>Trabajar > ${pageName}</div>
   </div>
    `;
 };
