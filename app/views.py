@@ -185,6 +185,7 @@ def identify(request):
     return HttpResponseRedirect(reverse('dashboard'))
 
 def identify_login(request):
+    info = None
     video_capture = cv2.VideoCapture(0)
     buf_length = 10
     known_conf = 6
@@ -249,11 +250,13 @@ def identify_login(request):
     users = User.objects.values_list('name', flat=True)
     print(users)
 
-    if info in users:
-        return HttpResponseRedirect(reverse('dashboard'))
-    else:
-        HttpResponseRedirect(reverse('login'))
-
+    if info is not None:
+        if info in users:
+            return HttpResponseRedirect(reverse('dashboard'))
+        else:
+            HttpResponseRedirect(reverse('login'))
+    
+    return HttpResponseRedirect(reverse('login'))
 
 
 
