@@ -142,6 +142,9 @@ def identify_faces(video_capture):
 def login(request):
     return render(request, 'app/login.html')
 
+def pricing(request):
+    return render(request, 'app/pricing.html')
+
 def dashboard(request):
     return render(request, 'app/index.html')
 

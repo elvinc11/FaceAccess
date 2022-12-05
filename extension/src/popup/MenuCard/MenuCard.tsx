@@ -22,6 +22,7 @@ export default function MenuCard() {
       </CardContent>
       <CardActions>
         <Button href="http://127.0.0.1:8000/" target="_blank"size="small">Ajustes</Button>
+        <Button href="http://127.0.0.1:8000/pricing/" target="_blank"size="small">Plan</Button>
       </CardActions>
     </Card>
   );
