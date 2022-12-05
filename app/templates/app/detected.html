@@ -58,32 +58,12 @@
     <tr class="header">
       	<th width="200">ID</th>
       	<th width="300">Fecha Ingreso</th>
-        <th width="100">Image</th>
   	</tr>
   	{% for det in det_list %}
 
         <tr>
             <td>{{det.user_id}}</td>
             <td>{{det.time_stamp}}</td>
-            <td>
-              <!-- <img src="{{ det.photo.url }}" height="100" style="margin-bottom: 5px;"> -->
-              <img src="{{ det.photo.url }}" height="100" style="margin-bottom: 5px;">
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{ det.id }}">Click to enlarge</button>
-
-                <!-- Modal -->
-                <div id="{{ det.id }}" class="modal fade" role="dialog" style="background:">
-                  <div class="modal-dialog modal-lg" style="text-align: center">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <img src="{{ det.photo.url }}" style="margin-bottom: 5px;">
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-            </td>
         </tr>
         
   	{% endfor %}
